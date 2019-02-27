@@ -1,34 +1,53 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using OpenQA.Selenium;
 using NUnit.Framework;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Support.UI;
+using OpenQA.Selenium.Support.UI; 
 
 namespace HW1_Selenium
 {
- 
-    public class TestMethod
+    public class TestClass
     {
-        private IWebDriver driver;
-        private string link_url = "https://rozetka.com.ua/";
+        private IWebDriver _driver;
+        private string _linkUrl; 
 
-        [Test]
-        public void ClickFirstLink()
+        [SetUp]
+        public void Before()
         {
-            ChromeOptions options = new ChromeOptions();
+            var options = new ChromeOptions();
+            options.AddArgument("--incognito");
             options.AddArgument("--start-maximized");
-            driver = new ChromeDriver(options);
-            driver.Navigate().GoToUrl(link_url);
-            new WebDriverWait(driver, TimeSpan.FromSeconds(5)).Until(d => d.Url == link_url);
-            IWebElement link = driver.FindElement(By.TagName("a"));
-            link.Click();
-            driver.Quit();
-
+            _driver = new ChromeDriver(options);
         }
 
+        [Test] 
+        public void ClickContactsLinkAndCheckThatItemIsActive() 
+        {
+            _linkUrl = "https://rozetka.com.ua/";
+            _driver.Navigate().GoToUrl(_linkUrl);
+            new WebDriverWait(_driver, TimeSpan.FromSeconds(5)).Until(driver => driver.Url == _linkUrl); 
+
+            _driver.FindElement(By.XPath("//li[@class='header-topline__links-item']/a[contains(@href, 'contacts')]")).Click();
+            var activeMenuItem = _driver.FindElement(By.XPath("//li[@class='m-static-i active']")); 
+
+            Assert.True(activeMenuItem.Text.Contains("Контакт"), "Active Menu Item does not contain 'Контакт'!");
+
+            _driver.Quit();
+        }
+
+        [Test] 
+        public void ClickAndCheck() 
+        {
+            _linkUrl = "https://www.epam.com/";
+            _driver.Navigate().GoToUrl(_linkUrl);
+            new WebDriverWait(_driver, TimeSpan.FromSeconds(5)).Until(driver => driver.Url == _linkUrl); 
+
+            _driver.FindElement(By.XPath("XXXXXXXXXXXXXXXXXXXXXXXXXXXXX")).Click();
+            var activeMenuItem = _driver.FindElement(By.XPath("XXXXXXXXXXXXXXXXXX")); 
+
+            Assert.True(activeMenuItem.Text.Contains("XXXXXXXXXX"), "Active Menu Item does not contain 'XXXXXXXXX'!");
+
+            _driver.Quit();
+        }
     }
 }
