@@ -6,35 +6,37 @@ using System.Threading.Tasks;
 
 namespace HW1
 {
-    class Number
+    class Operations
     {
-        static void Main(string[] args)
+        public static void ReadArray(int[] array)
         {
-            Console.WriteLine("Please enter 5 numbers:");
-            int[] array = new int[5];
+            Console.WriteLine($"Please enter {array.Length} numbers:");
             for (int i = 0; i < array.Length; i++)
             {
                 while (true)
                 {
                     try
                     {
-                        array[i] = Int32.Parse(Console.ReadLine());
+                        array[i] = int.Parse(Console.ReadLine());
                         break;
                     }
                     catch (FormatException ex)
                     {
-                        Console.WriteLine("Incorrect input data");
+                        Console.WriteLine("Incorrect input: "+ ex.Message);
                     }
                 }
             }
+
+        }
+
+        public static void WriteArray(int[] array)
+        {
             Console.WriteLine("Result: ");
             foreach (int value in array)
             {
                 Console.Write(value * 10 + " ");
             }
-            Console.ReadKey();
         }
 
     }
 }
-
