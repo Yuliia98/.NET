@@ -10,7 +10,6 @@ namespace HW2_Game
     {
         static void Main(string[] args)
         {
-
         }
     }
 }

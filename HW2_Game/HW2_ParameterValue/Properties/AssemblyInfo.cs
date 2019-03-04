@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("HomeWork2")]
+[assembly: AssemblyTitle("HW2_ParameterValue")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("HomeWork2")]
+[assembly: AssemblyProduct("HW2_ParameterValue")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("d5a034f3-600e-427b-8584-a7cdf3d3e124")]
+[assembly: Guid("ba124ed8-c437-453c-8081-499a7af0514a")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //

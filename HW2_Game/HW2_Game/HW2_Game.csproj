@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B6AEC56D-864F-4E26-9D43-64E3D63D6815}</ProjectGuid>
+    <ProjectGuid>{9FB4EBF0-05B6-4609-B3BA-A8EA7AA6F31C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>HW2_ParameterValue</RootNamespace>
-    <AssemblyName>HW2_ParameterValue</AssemblyName>
+    <RootNamespace>HW2_Game</RootNamespace>
+    <AssemblyName>HW2_Game</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActionsWithStrings.cs" />
+    <Compile Include="Game.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

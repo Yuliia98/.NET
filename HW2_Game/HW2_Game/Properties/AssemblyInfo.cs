@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("HW2_ParameterValue")]
+[assembly: AssemblyTitle("HW2_Game")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("HW2_ParameterValue")]
+[assembly: AssemblyProduct("HW2_Game")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("b6aec56d-864f-4e26-9d43-64e3d63d6815")]
+[assembly: Guid("9fb4ebf0-05b6-4609-b3ba-a8ea7aa6f31c")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //
