@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace HW1
 {
-    class Number
+    class MainClass
     {
         static void Main(string[] args)
         {
+            var array = new int[5];
+            Operations.ReadArray(array);
+            Operations.WriteArray(array);
+            Console.ReadKey();
         }
+
     }
 }
+
