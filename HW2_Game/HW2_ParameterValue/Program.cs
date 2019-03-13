@@ -10,7 +10,7 @@ namespace HW2_ParameterValue
     {
         static void Main(string[] args)
         {
-            ActionsWithStrings.AnalyzeInput();
+            ActionsWithStrings.CheckInput();
         }
     }
 }
