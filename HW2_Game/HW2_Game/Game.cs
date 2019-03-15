@@ -1,24 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HW2_Game
 {
     class Game
     {
-        public static int number;
+        public static int Number; 
         public static void CheckInput(int randomNumber)
         {
-
             while (true)
             {
                 while (true)
                 {
                     try
                     {
-                        number = int.Parse(Console.ReadLine());
+                        int.TryParse(Console.ReadLine(), out Number); 
                         break;
                     }
                     catch (FormatException ex)
@@ -26,11 +21,11 @@ namespace HW2_Game
                         Console.WriteLine("Incorrect input: " + ex.Message);
                     }
                 }
-                if (number < randomNumber)
+                if (Number < randomNumber)
                 {
                     Console.WriteLine("My number is more :( ");
                 }
-                else if (number > randomNumber)
+                else if (Number > randomNumber)
                 {
                     Console.WriteLine("My number is less :( ");
                 }
